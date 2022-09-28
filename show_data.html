@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Feedback Sent</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="./assets/images/logo_mighty_ducks-01.png"
+          alt="League's logo"
+          id="logo"
+        />
+        <a href="./index.html">Home</a>
+        <a href="./aboutmdhl.html">About MDHL</a>
+        <a href="./game_info.html">Game Info</a>
+        <a href="./rules.html">Rules</a>
+        <a href="./registration.html">Registration</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <h1>Mighty Ducks Hockey League</h1>
+      <figure>
+        <img
+          id="banner1"
+          src="./assets/images/design1_image1.jpg"
+          alt="Hockey's game"
+        />
+      </figure>
+      <h2>Form Results</h2>
+    </header>
+
+    <main>
+      <h3 class="text-align-center">
+        The following information has been sent as your feedback:
+      </h3>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Form Field</th>
+            <th>Field Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <script language="javascript">
+            var args = location.search.substr(1).split("&");
+            for (var i = 0; i < args.length; ++i) {
+              var parts = args[i].split("=");
+              if (parts != null) {
+                var field = parts[0];
+                var value = parts[1];
+                if (value == null) {
+                  value = "null";
+                } else {
+                  value = '"' + unescape(value.replace(/\+/g, " ")) + '"';
+                }
+
+                document.writeln('<tr><td align="center">' + field + "</td>");
+                document.writeln('<td align="center">' + value + "</td></tr>");
+              }
+            }
+          </script>
+
+          <noscript>
+            <tr>
+              <td>
+                <p>You need to turn on Javascript in your browser.</p>
+
+                <p>In Microsoft Internet Explorer 4 or greater:</p>
+                <ul>
+                  <li>
+                    From the "Tools" menu (in IE 4, it's the "View" menu),
+                    select "Internet Options".
+                  </li>
+                  <li>Click on the "Security" tab.</li>
+                  <li>
+                    Click on the "Custom Level" button. (In IE 4, select
+                    "Custom" and then click on "Settings...".)
+                  </li>
+                  <li>
+                    Under "Active scripting" make sure "Enable" is selected.
+                  </li>
+                </ul>
+
+                <p>In Netscape version 4 or greater:</p>
+                <ul>
+                  <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+                  <li>
+                    In the <b>Category</b> list on the left, click on the word
+                    "Advanced".
+                  </li>
+                  <li>
+                    In the panel on the right, make sure "Enable JavaScript" is
+                    checked.
+                  </li>
+                  <li>Click the <b>OK</b> button.</li>
+                </ul>
+              </td>
+            </tr>
+          </noscript>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <p>Site created by Iván Gutiérrez</p>
+    </footer>
+  </body>
+</html>
